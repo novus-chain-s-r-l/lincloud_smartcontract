@@ -1,0 +1,261 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "actual_user_state",
+				"outputs": [
+					{
+						"internalType": "enum user.user_state",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "oracleId",
+						"type": "uint256"
+					}
+				],
+				"name": "addOracle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "recipientId",
+						"type": "uint256"
+					}
+				],
+				"name": "addRecipient",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "closeUserContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllOracles",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllRecipients",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getUserId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "id_user",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "oracles_list",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id_oracle",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "recipients_list",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id_recipient",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "timestamp",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "response",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "isTimeExpired",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "recipientId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "response",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "isTimeExpired",
+						"type": "bool"
+					}
+				],
+				"name": "setRecipientResponse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "recipientId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "timestamp",
+						"type": "string"
+					}
+				],
+				"name": "setRecipientTimeStamp",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "setUserStateToDeceased",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Lincloud/.deps/contract/contract.sol": "user"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Lincloud/.deps/contract/contract.sol": {
+			"keccak256": "0xbec875c6f253d7388c8a2d9665ec278fb648788c481402149a1f1fce1169d39f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3497ebc07450ffd9ec6c668246beb94d60a50a57f97abe59387f25b3c958704d",
+				"dweb:/ipfs/QmeRRVkhHitY6sirF63PpzfwRDBxAMS4UkXhQPXfDerYWr"
+			]
+		}
+	},
+	"version": 1
+}
