@@ -26,7 +26,7 @@
 				"name": "actual_user_state",
 				"outputs": [
 					{
-						"internalType": "enum user.user_state",
+						"internalType": "enum user_contract.user_state",
 						"name": "",
 						"type": "uint8"
 					}
@@ -82,12 +82,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "getUserId",
+				"name": "getAllOracles",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "uint256[]",
 						"name": "",
-						"type": "uint256"
+						"type": "uint256[]"
 					}
 				],
 				"stateMutability": "view",
@@ -95,12 +95,25 @@
 			},
 			{
 				"inputs": [],
-				"name": "id_user",
+				"name": "getAllRecipients",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "uint256[]",
 						"name": "",
-						"type": "uint256"
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isContractClosed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -219,6 +232,19 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "userId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -234,9 +260,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Lincloud/.deps/contract/contract.sol": "user"
+			"Lincloud/.deps/contract/contract.sol": "user_contract"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -249,11 +275,11 @@
 	},
 	"sources": {
 		"Lincloud/.deps/contract/contract.sol": {
-			"keccak256": "0x654fcbc8d74e33867c0d4932797443bac03d6b20d5f8e4a3150b094e6bfd5a6c",
+			"keccak256": "0xba249694d336ffdc71c9d0361d7b608c786d41d04df528496ffeed6f36328794",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://37b64771786aaa7192e4b451ae13ba93d6d9bf2fc9cb1a6c3f7ceea339c7421b",
-				"dweb:/ipfs/QmVcpt2uLo12PqGFyK9r2pKC5Jsi2AHrPCoLsNaukRaxLe"
+				"bzz-raw://adf3129bb652f4da7b946096e3813a89038fdf1a512be2503fd8a29d2cadaee9",
+				"dweb:/ipfs/QmRvGcLxamE87xYjG2oWXdka6oxZbCZMhZ8PV5mXJC1qrB"
 			]
 		}
 	},
