@@ -11,6 +11,97 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_value",
+						"type": "string"
+					}
+				],
+				"name": "ContractState",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256[]",
+						"name": "_value",
+						"type": "uint256[]"
+					}
+				],
+				"name": "Oracle",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256[]",
+						"name": "_value",
+						"type": "uint256[]"
+					}
+				],
+				"name": "Recipient",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_value",
+						"type": "string"
+					}
+				],
+				"name": "Response",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_value",
+						"type": "string"
+					}
+				],
+				"name": "TimeStamp",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256[]",
+						"name": "_value",
+						"type": "uint256[]"
+					}
+				],
+				"name": "UserId",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_value",
+						"type": "string"
+					}
+				],
+				"name": "UserState",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -54,7 +145,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "closeUserContractNotify",
+				"name": "closeUserContract",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -97,16 +188,98 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getAllUsersId",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "uint256[]",
-						"name": "",
-						"type": "uint256[]"
+						"internalType": "uint256",
+						"name": "userId",
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"name": "getAllOracles",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "userId",
+						"type": "uint256"
+					}
+				],
+				"name": "getAllRecipients",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllUsersId",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "userId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "recipientId",
+						"type": "uint256"
+					}
+				],
+				"name": "getRecipientResponse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "userId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "recipientId",
+						"type": "uint256"
+					}
+				],
+				"name": "getRecipientTimeStamp",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "userId",
+						"type": "uint256"
+					}
+				],
+				"name": "getUserContractState",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "userId",
+						"type": "uint256"
+					}
+				],
+				"name": "getUserState",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -164,7 +337,12 @@
 					},
 					{
 						"internalType": "string",
-						"name": "timestamp",
+						"name": "time",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "date",
 						"type": "string"
 					}
 				],
@@ -208,18 +386,18 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
+			"enabled": true,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
 		"Lincloud/.deps/contract/contract.sol": {
-			"keccak256": "0xba249694d336ffdc71c9d0361d7b608c786d41d04df528496ffeed6f36328794",
+			"keccak256": "0x1a53bb154a1ce4031e71ca3cccd090e05b07ded46570afc030885a96640cc84d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://adf3129bb652f4da7b946096e3813a89038fdf1a512be2503fd8a29d2cadaee9",
-				"dweb:/ipfs/QmRvGcLxamE87xYjG2oWXdka6oxZbCZMhZ8PV5mXJC1qrB"
+				"bzz-raw://362f7257b5ad1bf9e023198b2577d96501fd2af6d204371df6ba0bfd9b95454b",
+				"dweb:/ipfs/QmbrpZ2LTuncoRrbA7yxosS2Map3gL1G6EAZAdVr2vwHgJ"
 			]
 		}
 	},
