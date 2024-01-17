@@ -14,6 +14,7 @@ contract lincloud_contract
     event TimeStamp(string _value);
     event Response(string _value);
     event ContractState(string _value);
+    event ContractUserMap(address contr);
     
     constructor() {
         owner = msg.sender;
@@ -214,6 +215,10 @@ contract lincloud_contract
             }
         }
         emit ContractState(state);
+    }
+
+    function getUserContractAddress(uint256 userId) public{
+        emit ContractUserMap(contract_user_map[userId]);
     }
 }
 

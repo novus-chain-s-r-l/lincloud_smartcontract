@@ -28,6 +28,19 @@
 				"inputs": [
 					{
 						"indexed": false,
+						"internalType": "address",
+						"name": "contr",
+						"type": "address"
+					}
+				],
+				"name": "ContractUserMap",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
 						"internalType": "uint256[]",
 						"name": "_value",
 						"type": "uint256[]"
@@ -264,6 +277,19 @@
 						"type": "uint256"
 					}
 				],
+				"name": "getUserContractAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "userId",
+						"type": "uint256"
+					}
+				],
 				"name": "getUserContractState",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -393,11 +419,11 @@
 	},
 	"sources": {
 		"Lincloud/.deps/contract/contract.sol": {
-			"keccak256": "0x32abfcf3b113882a437bb86b94e28f40734c6103591de63e79fcde09348eea87",
+			"keccak256": "0xafe0a6c209e1b35130a143a2d81152d2005b784820bddc37e64c98077a0f74ee",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2d547dc3e0fba4077e932f8d9bfb38ae6fede723cb03cf38d3657338d7869a6c",
-				"dweb:/ipfs/QmY1pHYuzjtU42F4oCAKTS74nwbs9T79T2Zwi6nmrGSPN2"
+				"bzz-raw://05811c83dec4140fa1fccd9bd1501a0a3ae9026bac04522fe1d018ccb0dcbead",
+				"dweb:/ipfs/Qmc9bUsHgskdjAta8qkKFV5LoEASWq2M92mmoeq8bPoknU"
 			]
 		}
 	},
