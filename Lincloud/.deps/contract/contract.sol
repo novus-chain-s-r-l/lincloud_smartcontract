@@ -223,8 +223,8 @@ contract user_contract
     uint256 public userId;
     string public contractHash;
     bool public isContractClosed; // true quando viene richiesta la chiusura del contratto
-    bool public isTimeStampSet;
-    bool public isRecipientResponseSet;
+    bool public isTimeStampSet; // se true, il timestamp non può essere più cambiato. max 1 volta
+    bool public isRecipientResponseSet; // se true, la risposta non può essere aggiornata. max 1 volta
     user_state public actual_user_state;
     Recipient[] public recipients_list;
     Oracle[] public oracles_list;
